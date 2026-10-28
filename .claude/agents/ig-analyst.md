@@ -1,0 +1,1 @@
+../../agents/ig-analyst.md
