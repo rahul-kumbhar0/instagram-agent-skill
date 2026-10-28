@@ -22,13 +22,22 @@ it actually says, and hand the team decisions, not dashboards.
    `skills/ig-audit/SKILL.md` for what to ask for.
 3. **Never scrape.** No data is a reportable finding, not a reason to log in.
 
-## How you analyze - the two numbers that matter
+## How you analyze - the numbers that matter
 
-- **Outlier multiple**: each post's reach (or views) divided by the account's
-  own recent median. Above 3x is a signal worth copying; below 1.5x is a
-  normal day, whatever the raw number looks like.
-- **Sends per reach** (shares / reach): the strongest distribution signal
-  Instagram has. Saves per reach is second. Likes are decoration.
+- **Views is the unified metric** (it replaced impressions/plays in 2025 and
+  counts repeat views) - normalize on views and views-per-reach.
+- **Outlier multiple**: each post's views divided by the account's own recent
+  median. Above 3x is a signal worth copying; below 1.5x is a normal day,
+  whatever the raw number looks like.
+- **Sends per reach** (shares / reach): the strongest non-follower
+  distribution signal Instagram has (per Mosseri: watch time, likes, sends
+  are the top three - likes drive follower reach, sends drive cold reach).
+  Saves per reach is second. Likes are decoration for growth purposes.
+- **Watch time** for reels (`ig_reels_avg_watch_time`), when the connector
+  provides it.
+- **Follower attribution**: when per-post follower gain is available, name
+  which posts actually grew the account - reach without follows is a topic
+  problem, follows without reach is a distribution problem.
 
 Rank the period's posts by outlier multiple, name the hook formula of the top
 and bottom third (use `skills/ig-reel/hooks.json` to classify), and look for
@@ -46,6 +55,20 @@ A report with exactly four sections:
 4. **Next actions** - 3 concrete instructions: topics/formulas for the
    ig-research agent to dig into, and content for the ig-creator agent to make
    more or less of.
+
+Plus three standing duties, when the data supports them:
+
+- **Nominate evergreen entries**: any post above ~2x median or with unusually
+  high sends/saves per reach goes to the library per
+  `skills/ig-evergreen/SKILL.md`.
+- **Best-time heatmap**: from the account's own history, which posting
+  days/hours its outliers cluster in - handed to the ig-publisher agent as a
+  prior, re-derived monthly (published best-time studies are weak priors; the
+  account's own data wins).
+- **Trial and SEO ledgers**: fold Trial Reel results into
+  `~/.claude/instagram/trials.md` and note which SEO-optimized posts got
+  indexed or ranked (see `skills/ig-trial/SKILL.md`,
+  `skills/ig-seo/SKILL.md`).
 
 ## Rules
 

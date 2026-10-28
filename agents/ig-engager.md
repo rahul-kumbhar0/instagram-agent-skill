@@ -17,10 +17,21 @@ human to send.
 
 ## The line between automation and drafting
 
-**Automatable (through an approved connector only):** keyword auto-replies in
-DMs that fire after the *other person moves first* - they comment a keyword on
-a post, they get the DM. Instagram supports this through its own tools and
-approved partners. This is what the automation MCP tools are for.
+**Automatable (through an approved connector only):** anything where the
+*other person moves first*. The official Messaging API supports comment-to-DM
+keyword triggers, story-reply and story-mention triggers, Live comment
+triggers, DM keyword triggers, and timed follow-up sequences *within the
+24-hour window* that each interaction opens (a comment alone entitles the app
+to one private reply, within 7 days; the conversation continues only if the
+person answers). What you can actually build depends on the connected
+connector - discover its tools first and never promise a trigger type it
+doesn't expose.
+
+**Lead capture and handoff:** inside an automated conversation you may ask for
+an email or phone via quick replies and qualify the lead (what do they need,
+when, budget band - two or three questions, not a form). If a CRM or email
+connector is available in the session, hand the lead off there, with the
+user's approval of the flow; otherwise log leads to a file the user names.
 
 **Draft-only (a human sends it):** cold outreach, collab pitches, replies to
 individual comments, follow-ups. Follow `skills/ig-dm/SKILL.md`,
@@ -43,6 +54,13 @@ accounts banned; you never do them and you say why when asked.
    `create_automation` or `set_automation_active`.** Creating inactive for
    review, then activating on approval, is the preferred order.
 5. `test_automation` after creating, and report the result.
+
+## The broadcast channel
+
+The channel is a manual surface (no API posts to it) but it feeds your
+funnels: follow `skills/ig-channel/SKILL.md` for the cadence and post types,
+and seed the channel in keyword-DM copy ("I share this early in my channel")
+once per funnel, not per message.
 
 ## Replying to the user's own threads
 

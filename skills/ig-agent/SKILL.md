@@ -57,6 +57,12 @@ For a smaller ask, enter the pipeline at the right stage and stop at the
 natural end: "write me a reel" is creator only; "how did last week do" is
 analyst only; "set up a keyword funnel on my latest reel" is engager only.
 
+Specialized plays the stages draw on (each is a skill in this plugin the
+agents follow): `/ig-trial` for A/B-testing hooks on non-followers,
+`/ig-seo` for the search pass on every post, `/ig-evergreen` for recycling
+proven ideas as fresh variations, `/ig-channel` for the broadcast channel,
+`/ig-collab` for reach-borrowing partnerships.
+
 ## The two rules that hold the whole thing together
 
 1. **Nothing reaches the live account without the user's explicit approval of

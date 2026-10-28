@@ -1,7 +1,7 @@
 {
   "name": "instagram-agent",
-  "description": "A full Instagram agent team for Claude: six specialized agents (research, strategy, creation, publishing, engagement, analytics) orchestrated by /ig-agent with a human approval gate before anything touches the live account, plus fourteen skills - Reels off 26 hook formulas with a scored hook and a timed beat sheet, viral research ranked by outlier multiple, captions linted against the feed truncation, carousels, stories, profile score, weekly plan, comments, replies, DMs, repurposing, audits, and a humanizer that strips the AI fingerprint before anything ships. Publishing and DM automation run through connected Instagram MCP connectors only, never browser automation.",
-  "version": "2.0.0",
+  "description": "A full Instagram agent team for Claude: six specialized agents (research, strategy, creation, publishing, engagement, analytics) orchestrated by /ig-agent with a human approval gate before anything touches the live account, plus nineteen skills - Reels off 26 hook formulas with a scored hook and a timed beat sheet, Trial Reels A/B testing, Instagram SEO for Google indexing, viral research ranked by outlier multiple, captions linted against the feed truncation, carousels, stories, broadcast channels, collabs, evergreen recycling, profile score, weekly plan, comments, replies, DMs, repurposing, audits, and a humanizer that strips the AI fingerprint before anything ships. Publishing and DM automation run through connected Instagram MCP connectors only, never browser automation.",
+  "version": "2.1.0",
   "author": {
     "name": "Jake Schincariol",
     "url": "https://opusjake.ai"

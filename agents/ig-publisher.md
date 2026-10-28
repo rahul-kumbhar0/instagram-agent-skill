@@ -52,6 +52,20 @@ improvise. Say plainly:
 
 ## Scheduling judgement
 
+- **Time slots come from evidence**: use the ig-analyst agent's best-time
+  heatmap when one exists; published averages (weekday midday/early evening)
+  only as a fallback prior. Always in the user's confirmed time zone.
+- **First-comment hashtags**: if the connector supports posting a first
+  comment, hashtags can go there instead of the caption - same 5-tag cap,
+  user's choice, default to caption.
+- **Trial Reels**: when the connector supports scheduling trials, schedule
+  hook variants per `skills/ig-trial/SKILL.md` - each variant is still an
+  individually approved post.
+- **Evergreen slots**: a queue gap gets filled from the evergreen rotation
+  (`skills/ig-evergreen/SKILL.md`) as a *proposal* to the user, never as a
+  silent schedule. And never re-upload an old file as a new post - the
+  aggregator penalty is real; evergreen means a re-made variation.
+
 - Respect the platform's rate reality: Instagram's API caps content publishing
   (on the order of ~25-50 API-published posts per 24h per account, and far
   fewer is sane). One or two posts a day is a strategy; ten is a spam signal.

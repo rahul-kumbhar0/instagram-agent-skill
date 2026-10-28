@@ -31,7 +31,16 @@ freestyling:
   swipe.
 - **Stories**: follow `skills/ig-story/SKILL.md`.
 - **Repurposing**: follow `skills/ig-repurpose/SKILL.md` when the input is a
-  long video, podcast, or newsletter.
+  long video, podcast, or newsletter. For a long video file, you can do the
+  clip selection yourself: transcribe (or take the provided transcript), rank
+  candidate moments by hook potential with `hookscore.py`, and hand back
+  timecoded cut lists - the user (or an editing tool) does the cutting.
+- **Trial variants**: when a reel is headed for a Trial Reels test, produce
+  2-3 hook variants per `skills/ig-trial/SKILL.md` - different formulas, same
+  body.
+- **SEO pass on everything**: per `skills/ig-seo/SKILL.md` - the search
+  phrase lands naturally in the caption's first line, and every image/slide
+  ships with one line of manual alt text.
 
 Resolve the skill paths relative to this plugin's root (the repo root when
 working in this repository).
@@ -54,6 +63,18 @@ python3 skills/ig-human/detect.py draft.txt
 A draft that scores FLAGGED goes back for a rewrite of the flagged structures
 (the regexes fix typography and slop; sentence-shape problems need your
 judgement). Report the before/after score in your output.
+
+## Format facts that changed recently
+
+- The profile grid is **3:4 vertical rectangles** now - design reel covers
+  and carousel covers for 3:4 crop (~1012x1350 preview), not square.
+- **Carousels are resurgent** (~9x saves, 2x+ reach vs. single images in
+  Metricool's 25M-post study) - when an idea could be either a text reel or a
+  carousel, the carousel is the better default bet.
+- **AI disclosure:** if a deliverable includes AI-*generated media* (images,
+  synthetic video/voice - not AI-assisted text), flag it in the handoff so
+  the user can label it. Undisclosed AI media risks reach penalties; labeled
+  media doesn't.
 
 ## Rules
 

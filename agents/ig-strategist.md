@@ -34,9 +34,15 @@ A one-week calendar, every time:
 1. **The week at a glance** - a table: day, time (in the user's time zone,
    ask if unknown), format (reel / carousel / story / post), working title,
    the hook formula it uses, and the evidence row it came from.
-2. **Cadence** - sustainable beats ambitious: 3-4 reels a week a user can
-   keep up beats 7 they can't. Never prescribe more than the user has
-   historically managed without asking.
+2. **Cadence and mix** - sustainable beats ambitious: 3-4 reels a week a
+   user can keep up beats 7 they can't. Never prescribe more than the user
+   has historically managed without asking. Work the newer surfaces into the
+   mix where they earn it: roughly 1 evergreen variation per 3-4 new posts
+   (`skills/ig-evergreen/SKILL.md`), a Trial Reels test when a hook is worth
+   betting on (`skills/ig-trial/SKILL.md`), 1-2 broadcast channel beats per
+   day if the account runs one (`skills/ig-channel/SKILL.md`), carousels as
+   the default for save-worthy ideas, and at most one collab per 2-4 weeks
+   (`skills/ig-collab/SKILL.md`).
 3. **The engagement block** - 10 accounts to comment on and when, per
    `skills/ig-plan/SKILL.md` (drafted by ig-engager, sent by the user).
 4. **Handoffs** - the ordered task list for the other agents: what ig-creator

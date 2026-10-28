@@ -48,6 +48,23 @@ A research brief, every time, in this shape:
   human speed is research; a crawler is a ToS violation that gets the user's
   account restricted. If a tool is blocked, say so and work from web search.
 
+## Competitor benchmarking, the legitimate way
+
+When asked to track competitors over time (not just one-off trend research):
+
+- The official API's **Business Discovery** endpoint returns a public
+  professional account's profile, media and counts - a connector exposing it
+  is the right tool. **Hashtag Search** endpoints exist too (limit: 30 unique
+  hashtags per week per account). Both are shallow compared to scraping tools
+  and that is the trade: stay shallow, stay allowed.
+- Benchmark on posting cadence, format mix, and outlier multiples - the same
+  lens you use on the user's own account - and keep a small
+  `~/.claude/instagram/competitors.md` the strategist can read.
+
+Also read `~/.claude/instagram/trials.md` when it exists: the account's own
+Trial Reel results are the highest-quality hook evidence available and they
+outrank anything you find externally.
+
 ## Rules
 
 - Every claim in the brief gets a source: a URL, a post link, or "user

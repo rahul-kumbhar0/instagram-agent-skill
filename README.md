@@ -16,7 +16,7 @@ One agent per job, launched by the `/ig-agent` orchestrator or on their own:
 | `ig-strategist` | turns the evidence into a weekly content calendar and task list | no |
 | `ig-creator` | writes the reels, carousels, captions and stories - hook-scored, beat-timed, humanizer-gated | no |
 | `ig-publisher` | schedules and publishes **approved** content through a connected Instagram connector | yes, only after your yes on the exact post |
-| `ig-engager` | comment-to-DM keyword funnels (the one automation Instagram allows), drafted replies and outreach | automations only, after approval |
+| `ig-engager` | inbound DM automations - comment-to-DM, story-reply and Live triggers, follow-up sequences inside the 24h window, lead capture - plus drafted replies and outreach | automations only, after approval |
 | `ig-analyst` | pulls performance, runs the outlier post-mortem, feeds the next cycle | no |
 
 `/ig-agent` runs the loop: research + analyze → plan → create → publish →
@@ -80,7 +80,7 @@ reels and say "write my voice.md from these". Every skill reads that file. It
 matters more here than on other platforms, because you have to say the words
 out loud.
 
-## The thirteen
+## The skills
 
 | command | what it does |
 | --- | --- |
@@ -97,6 +97,11 @@ out loud.
 | `/ig-dm` | The keyword delivery, the first message, the collab pitch, and the two follow-ups. Two. |
 | `/ig-repurpose` | One video, podcast or newsletter into a week of reels and carousels that each stand alone. |
 | `/ig-audit` | Post-mortem on what you already posted. Ranks by outlier multiple and sends per reach, not views. |
+| `/ig-trial` | The Trial Reels lab. 2-3 hook variants of one script, tested on non-followers only, winner published, learnings logged. |
+| `/ig-seo` | Instagram SEO. Google indexes public professional accounts since July 2025 - keyword the caption's first line, the bio name field, and the alt text. |
+| `/ig-channel` | The broadcast channel. 1-2 posts a day, four post types, the join sticker, and the line where over-posting empties the channel. |
+| `/ig-collab` | The collab matchmaker. Scores partner candidates, drafts the pitch, plans the joint post that works for both audiences cold. |
+| `/ig-evergreen` | The evergreen library. Proven ideas recycled as fresh variations on a category rotation - never a repost, because the aggregator penalty is real. |
 
 ## The five tools that actually run
 

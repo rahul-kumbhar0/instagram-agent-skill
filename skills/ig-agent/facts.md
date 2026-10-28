@@ -36,6 +36,63 @@ anything load-bearing with a fresh search before acting on it.
 - Gets accounts banned: unsolicited mass cold DMs, password-based third-party
   logins, scraping follower lists for outreach, fake engagement.
 
+## Metrics and ranking (2025-26 shift)
+
+- **Views is the unified primary metric** across Reels, posts, Stories and
+  carousels (fully live 2025). It counts repeat views. Normalize post-mortems
+  on views and views-per-reach, not the deprecated impressions/plays.
+- Mosseri's stated top 3 ranking signals (Jan 2025): **watch time, likes,
+  sends (DM shares)** - likes weigh more for follower reach, sends more for
+  non-follower reach. Sends-per-reach is the key distribution KPI.
+- **Aggregator penalty:** reposted content gets replaced by the original in
+  recommendations. Instagram added a credited Reposts tab (2025); reposting is
+  native but never a growth strategy.
+- **AI content labeling:** Meta auto-applies an "AI info" label via
+  C2PA/industry signals and expects self-disclosure otherwise. Correctly
+  labeled AI content shows no established reach penalty; *undisclosed* AI
+  content risks one (and, per provisional late-2026 reports, profile-level
+  labeling). Disclose rather than disguise.
+
+## Newer surfaces and features
+
+- **Trial Reels** (Dec 2024, public professional accounts): a reel shown only
+  to **non-followers**, hidden from the profile. Insights land ~24h later;
+  the winner can be published publicly (manually or auto-shared). This is
+  free A/B testing of hooks on a cold audience.
+- **Instagram SEO / Google indexing** (July 10, 2025): Google and Bing index
+  public content from professional accounts (on by default, opt-out in
+  settings). Captions, bios, alt text and hashtags are searchable. Front-load
+  search-intent keywords in the caption, keyword the bio name field, write
+  manual alt text on every post.
+- **Carousels are resurgent:** Metricool's ~25M-post study found carousels
+  get roughly 9x more saves, 2x+ reach and ~4x interactions vs. single
+  images.
+- **Profile grid is 3:4 vertical rectangles** (rolled out from Jan 2025;
+  preview ~1012x1350) and reorderable post-publication (2026) - covers and
+  grid aesthetics should be designed for 3:4, and the grid treated as a
+  curated storefront.
+- **Edits** (Instagram's free editing app, 2025): reel editing plus a
+  carousel editor (Oct 2026) with direct publish.
+- **Broadcast channels:** one-to-many DM-tab channels; subscribers get
+  notifications. Sane cadence is 1-2 posts/day; the "join channel" story
+  sticker drives signups.
+- **Collab posts:** one post on both profiles with merged engagement - the
+  cheapest legitimate reach-borrowing on the platform; both parties accept.
+- **Threads:** ~400M MAU (Aug 2025); posts shareable to IG Stories in-app
+  (Feb 2026). A repurposing and discovery surface - there is no solid
+  evidence cross-posting grows IG followers, so treat it as bonus, not
+  strategy.
+
+## DM automation, beyond comment-to-DM
+
+The official Messaging API also supports (and approved tools like ManyChat
+build on): **story-reply and story-mention triggers, Live comment triggers,
+DM keyword triggers**, timed follow-up sequences *within* the 24-hour window,
+and lead capture (email/phone via quick replies) with CRM handoff. All of it
+stays inbound-triggered: the other person always moves first. What a given
+connector exposes varies - discover its tools before promising a trigger
+type.
+
 ## Algorithm and format facts
 
 - **Hashtag cap is 5 per post** (cut from 30, announced December 2025,
