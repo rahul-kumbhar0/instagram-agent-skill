@@ -1,7 +1,35 @@
 # The Instagram agent skill
 
-Thirteen Claude skills that run an Instagram account. Free, MIT, no signup, no
-API key, nothing to connect.
+An Instagram agent team for Claude: six specialized agents orchestrated by one
+pipeline, on top of thirteen skills that run an Instagram account. Free, MIT,
+no signup, no API key required - and if you do connect an approved Instagram
+automation connector (MCP), the team schedules, publishes and runs DM funnels
+for real.
+
+## The agent team
+
+One agent per job, launched by the `/ig-agent` orchestrator or on their own:
+
+| agent | job | touches the live account? |
+| --- | --- | --- |
+| `ig-research` | finds what is working in your niche right now, ranked by outlier multiple, with sources | no |
+| `ig-strategist` | turns the evidence into a weekly content calendar and task list | no |
+| `ig-creator` | writes the reels, carousels, captions and stories - hook-scored, beat-timed, humanizer-gated | no |
+| `ig-publisher` | schedules and publishes **approved** content through a connected Instagram connector | yes, only after your yes on the exact post |
+| `ig-engager` | comment-to-DM keyword funnels (the one automation Instagram allows), drafted replies and outreach | automations only, after approval |
+| `ig-analyst` | pulls performance, runs the outlier post-mortem, feeds the next cycle | no |
+
+`/ig-agent` runs the loop: research + analyze → plan → create → publish →
+engage → measure, with a human approval gate at every write. A broad
+"automate my instagram" approves the pipeline, never its outputs - every post
+and every automation comes back to you before it ships. No connector
+connected? The same pipeline runs end to end and ends in copy-ready blocks
+you post by hand.
+
+The platform facts the team works from (API limits, the 5-hashtag cap, the
+comment-to-DM one-message rule, what automation gets accounts banned) live in
+[`skills/ig-agent/facts.md`](skills/ig-agent/facts.md), researched October
+2026 and marked to be re-verified when stale.
 
 One of them writes your Reels off 26 hook formulas and scores the hook before
 you waste a take on it. One goes and finds the reels that are actually working
