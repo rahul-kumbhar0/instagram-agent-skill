@@ -47,11 +47,15 @@ see it.
 
 ## Install - connecting this to Claude
 
-There are three ways in, from easiest to most manual.
+Pick the row that matches where you use Claude:
 
-### 1. As a Claude Code plugin (recommended - you get the agents)
+| where you use Claude | what to do |
+| --- | --- |
+| **claude.ai/code or the mobile app (cloud sessions)** | Nothing to install. Start a session **on this repository** (connect your GitHub, pick this repo) - the skills and agents load automatically from the repo's `.claude/` folder. Type `/ig-agent` and go. |
+| **Claude Code terminal or desktop app** | Use the plugin (below), or the manual copy if `/plugin` isn't available. |
+| **Plain claude.ai chat (no Claude Code)** | Paste any single `SKILL.md` at the top of a chat and it runs as a mode. You lose the Python tools and the agents, but the writing works. |
 
-In Claude Code (terminal, desktop app, or claude.ai/code):
+### As a plugin (terminal / desktop app)
 
 ```
 /plugin marketplace add rahul-kumbhar0/instagram-agent-skill
@@ -61,30 +65,27 @@ In Claude Code (terminal, desktop app, or claude.ai/code):
 /plugin install instagram-agent
 ```
 
-This installs all nineteen skills **and** the six-agent team. Confirm it
-works: type `/ig-agent` and ask it to plan your week.
+This installs all nineteen skills **and** the six-agent team. If you get
+"Plugins aren't available in this environment", you're in a cloud session -
+use the first row of the table instead, or the manual copy below.
 
-### 2. Paste the repo into Claude
-
-In any Claude Code session, paste:
-
-```
-https://github.com/rahul-kumbhar0/instagram-agent-skill
-
-Install this plugin, then confirm /ig-reel and /ig-agent work.
-```
-
-### 3. Manual copy (skills only)
+### Manual copy (works everywhere you have a terminal)
 
 ```bash
 git clone https://github.com/rahul-kumbhar0/instagram-agent-skill.git
+```
+
+```bash
 cp -r instagram-agent-skill/skills/ig-* ~/.claude/skills/
 ```
 
-Project-local instead of global: copy the same folders into your repo's
-`.claude/skills/` and `agents/` into `.claude/agents/`. No Claude Code at
-all? Paste any single `SKILL.md` at the top of a claude.ai chat and it runs
-as a mode - you lose the Python tools and the agents, but the writing works.
+```bash
+mkdir -p ~/.claude/agents && cp instagram-agent-skill/agents/*.md ~/.claude/agents/
+```
+
+Or just paste the repo URL into any Claude Code session and say "install
+this plugin, then confirm /ig-reel and /ig-agent work" - Claude does the
+copying for you.
 
 ### Connect an Instagram connector (optional, unlocks real automation)
 
