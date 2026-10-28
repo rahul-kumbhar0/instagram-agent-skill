@@ -9,10 +9,10 @@
   "plugins": [
     {
       "name": "instagram-agent",
-      "description": "Thirteen Claude skills that run an Instagram account, including a scored hook panel, a viral research skill, a caption linter and a humanizer.",
+      "description": "A six-agent Instagram team with an orchestrator pipeline and nineteen skills: scored hooks, Trial Reels A/B testing, Instagram SEO, viral research, a caption linter, a humanizer, and connector-based publishing and DM automation behind a human approval gate.",
       "source": "./",
       "category": "productivity",
-      "homepage": "https://github.com/Jakeschincariol/instagram-agent-skill"
+      "homepage": "https://github.com/rahul-kumbhar0/instagram-agent-skill"
     }
   ]
 }

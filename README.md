@@ -1,7 +1,35 @@
 # The Instagram agent skill
 
-Thirteen Claude skills that run an Instagram account. Free, MIT, no signup, no
-API key, nothing to connect.
+An Instagram agent team for Claude: six specialized agents orchestrated by one
+pipeline, on top of thirteen skills that run an Instagram account. Free, MIT,
+no signup, no API key required - and if you do connect an approved Instagram
+automation connector (MCP), the team schedules, publishes and runs DM funnels
+for real.
+
+## The agent team
+
+One agent per job, launched by the `/ig-agent` orchestrator or on their own:
+
+| agent | job | touches the live account? |
+| --- | --- | --- |
+| `ig-research` | finds what is working in your niche right now, ranked by outlier multiple, with sources | no |
+| `ig-strategist` | turns the evidence into a weekly content calendar and task list | no |
+| `ig-creator` | writes the reels, carousels, captions and stories - hook-scored, beat-timed, humanizer-gated | no |
+| `ig-publisher` | schedules and publishes **approved** content through a connected Instagram connector | yes, only after your yes on the exact post |
+| `ig-engager` | inbound DM automations - comment-to-DM, story-reply and Live triggers, follow-up sequences inside the 24h window, lead capture - plus drafted replies and outreach | automations only, after approval |
+| `ig-analyst` | pulls performance, runs the outlier post-mortem, feeds the next cycle | no |
+
+`/ig-agent` runs the loop: research + analyze → plan → create → publish →
+engage → measure, with a human approval gate at every write. A broad
+"automate my instagram" approves the pipeline, never its outputs - every post
+and every automation comes back to you before it ships. No connector
+connected? The same pipeline runs end to end and ends in copy-ready blocks
+you post by hand.
+
+The platform facts the team works from (API limits, the 5-hashtag cap, the
+comment-to-DM one-message rule, what automation gets accounts banned) live in
+[`skills/ig-agent/facts.md`](skills/ig-agent/facts.md), researched October
+2026 and marked to be re-verified when stale.
 
 One of them writes your Reels off 26 hook formulas and scores the hook before
 you waste a take on it. One goes and finds the reels that are actually working
@@ -17,42 +45,91 @@ see it.
 
 **Nothing gets posted until you say yes.** These skills write. You post.
 
-## Install
+## Install - connecting this to Claude
 
-Paste this into Claude:
+There are three ways in, from easiest to most manual.
 
-```
-https://github.com/Jakeschincariol/instagram-agent-skill
+### 1. As a Claude Code plugin (recommended - you get the agents)
 
-Install this skill, then confirm /ig-reel works.
-```
-
-Or do it yourself, in Claude Code:
-
-```bash
-git clone https://github.com/Jakeschincariol/instagram-agent-skill.git
-cp -r instagram-agent-skill/skills/ig-* ~/.claude/skills/
-```
-
-Or as a plugin:
+In Claude Code (terminal, desktop app, or claude.ai/code):
 
 ```
-/plugin marketplace add Jakeschincariol/instagram-agent-skill
+/plugin marketplace add rahul-kumbhar0/instagram-agent-skill
+```
+
+```
 /plugin install instagram-agent
 ```
 
+This installs all nineteen skills **and** the six-agent team. Confirm it
+works: type `/ig-agent` and ask it to plan your week.
+
+### 2. Paste the repo into Claude
+
+In any Claude Code session, paste:
+
+```
+https://github.com/rahul-kumbhar0/instagram-agent-skill
+
+Install this plugin, then confirm /ig-reel and /ig-agent work.
+```
+
+### 3. Manual copy (skills only)
+
+```bash
+git clone https://github.com/rahul-kumbhar0/instagram-agent-skill.git
+cp -r instagram-agent-skill/skills/ig-* ~/.claude/skills/
+```
+
 Project-local instead of global: copy the same folders into your repo's
-`.claude/skills/`. No Claude Code at all? Paste any single `SKILL.md` at the top
-of a chat and it runs as a mode. You lose the five Python tools, which is most
-of the point of `/ig-reel` and `/ig-human`, but the rest works.
+`.claude/skills/` and `agents/` into `.claude/agents/`. No Claude Code at
+all? Paste any single `SKILL.md` at the top of a claude.ai chat and it runs
+as a mode - you lose the Python tools and the agents, but the writing works.
 
-Then spend ten minutes on `templates/voice.md`. Copy it to
-`~/.claude/instagram/voice.md` and fill it in, or send Claude three of your own
-reels and say "write my voice.md from these". Every skill reads that file. It
-matters more here than on other platforms, because you have to say the words
-out loud.
+### Connect an Instagram connector (optional, unlocks real automation)
 
-## The thirteen
+Out of the box, everything ends in copy-ready blocks you post by hand - no
+API key, nothing to connect. To let the publisher and engager agents
+actually **schedule posts, publish, and run comment-to-DM automations**,
+connect an Instagram automation MCP connector to Claude:
+
+1. You need an Instagram **Professional account** (Business or Creator) -
+   the official API does not serve personal accounts.
+2. Connect an Instagram automation MCP server in claude.ai → **Settings →
+   Connectors** (any connector built on Meta's official Content Publishing
+   and Messaging APIs, or an approved Meta partner that ships an MCP
+   server). Self-hosters can run their own Graph-API MCP server with a Meta
+   developer app.
+3. That's it - the agents discover the connector's tools at runtime. No
+   connector found, they say so and fall back to copy-ready output. They
+   will never ask for your Instagram password, and they refuse browser
+   automation on principle (see the fine print below).
+
+### First ten minutes
+
+Spend them on `templates/voice.md`. Copy it to
+`~/.claude/instagram/voice.md` and fill it in, or send Claude three of your
+own reels and say "write my voice.md from these". Every skill and agent
+reads that file. It matters more here than on other platforms, because you
+have to say the words out loud.
+
+## Using it
+
+```
+/ig-agent run the full pipeline for my account
+/ig-agent plan my week
+/ig-reel one idea: why most freelancers underprice
+/ig-trial A/B test the hook on this script
+/ig-viral what's working in the fitness-coach niche right now
+/ig-audit (paste your insights)
+```
+
+Or just talk: "research my niche and draft the best three reels" routes
+through the research and creator agents on its own. Whatever you ask,
+**nothing is posted until you approve the exact post** - that gate is the
+design, not a setting.
+
+## The skills
 
 | command | what it does |
 | --- | --- |
@@ -69,6 +146,11 @@ out loud.
 | `/ig-dm` | The keyword delivery, the first message, the collab pitch, and the two follow-ups. Two. |
 | `/ig-repurpose` | One video, podcast or newsletter into a week of reels and carousels that each stand alone. |
 | `/ig-audit` | Post-mortem on what you already posted. Ranks by outlier multiple and sends per reach, not views. |
+| `/ig-trial` | The Trial Reels lab. 2-3 hook variants of one script, tested on non-followers only, winner published, learnings logged. |
+| `/ig-seo` | Instagram SEO. Google indexes public professional accounts since July 2025 - keyword the caption's first line, the bio name field, and the alt text. |
+| `/ig-channel` | The broadcast channel. 1-2 posts a day, four post types, the join sticker, and the line where over-posting empties the channel. |
+| `/ig-collab` | The collab matchmaker. Scores partner candidates, drafts the pitch, plans the joint post that works for both audiences cold. |
+| `/ig-evergreen` | The evergreen library. Proven ideas recycled as fresh variations on a category rotation - never a repost, because the aggregator penalty is real. |
 
 ## The five tools that actually run
 
@@ -326,12 +408,33 @@ skills/ig-profile/rubric.json      the 100-point profile score
 templates/voice.md                 your voice profile. Fill this in first.
 ```
 
+## Contributing
+
+This is open source and contributions are welcome. The useful ones:
+
+- **Fresh platform facts.** Instagram moves fast; [`skills/ig-agent/facts.md`](skills/ig-agent/facts.md)
+  is dated and meant to be corrected. A PR with a sourced update beats an
+  issue.
+- **Hook formulas and slop terms.** [`skills/ig-reel/hooks.json`](skills/ig-reel/hooks.json)
+  and [`skills/ig-human/slop.json`](skills/ig-human/slop.json) are data files
+  built to be extended - add formulas you see working, add the AI-tell
+  phrases you keep seeing.
+- **New skills and agents.** Follow the house style: one job per skill, a
+  `SKILL.md` with honest frontmatter, evidence over vibes, and nothing that
+  crosses the ToS line (no scraping, no browser automation, no credential
+  handling - PRs that add those will be closed).
+- **Measurements.** If you re-run the hook-scorer evaluation on a bigger
+  corpus and get different numbers, that is the most valuable PR of all.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the short version of the rules.
+
 ## Credit
 
-Made by Jake Schincariol, [opusjake.ai](https://opusjake.ai).
-
-Sibling repo, same idea for a different platform:
-[linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill).
+Original skill pack (v1.0, the thirteen skills and the five Python tools) by
+Jake Schincariol, [opusjake.ai](https://opusjake.ai) - sibling repo for
+another platform: [linkedin-agent-skill](https://github.com/Jakeschincariol/linkedin-agent-skill).
+The agent team, orchestrator pipeline, connector integration and the
+2025-26 feature skills were built on top of it in this fork.
 
 ## License
 
